@@ -1,28 +1,33 @@
 body{
 
     font-size: xx-large;
+    display: flex;
+    justify-content: center;
+
+}
+
+main{
+    text-align: center;
 }
 
 .calculator-body{
 
-    width: 20em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: #2196F3;
     grid-gap: .5em;
     padding: 10px;
 
-
 }
 
 .button{
 
     background-color: #21dbf3;
-    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    height: 5em;
+    width: 5em;
 }
 
 .display-equation{
@@ -32,7 +37,7 @@ body{
 
     background-color: #21dbf3;
     padding: .25em 1em;
-    display:flex;
+    display: flex;
 
     justify-content: center;
     align-items: stretch; 

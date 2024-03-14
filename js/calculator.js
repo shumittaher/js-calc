@@ -16,6 +16,9 @@ for (const numberButton of numberButtons) {
     
     numberButton.addEventListener('click', function () {
 
+        console.log(numberButton.value)
+
+
         if (newEquation == true) {
 
             cleanEquationWindow()

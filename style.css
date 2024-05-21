@@ -17,7 +17,6 @@ main{
     background-color: #2196F3;
     grid-gap: .5em;
     padding: 10px;
-
 }
 
 .button{
@@ -26,8 +25,9 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5em;
-    width: 5em;
+    height: 2em;
+    width: 2em;
+    font-size: xx-large;
 }
 
 .display-equation{

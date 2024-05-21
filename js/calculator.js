@@ -1,5 +1,4 @@
 const displayWindow = document.getElementById('display-results')
-
 const equationWindow = document.getElementById('full-equation')
 
 var firstNumber
@@ -16,7 +15,7 @@ for (const numberButton of numberButtons) {
     
     numberButton.addEventListener('click', function () {
 
-        console.log(numberButton.value)
+        const number = numberButton.dataset.value
 
 
         if (newEquation == true) {
@@ -25,7 +24,7 @@ for (const numberButton of numberButtons) {
 
         }
 
-        equationWindow.innerText = equationWindow.innerText + numberButton.innerText
+        equationWindow.innerText = equationWindow.innerText + number;
 
         if (newNumbers == true) {
 
@@ -33,7 +32,7 @@ for (const numberButton of numberButtons) {
             newNumbers = false
         }
 
-        displayWindow.innerText = displayWindow.innerText + numberButton.innerText;
+        displayWindow.innerText = displayWindow.innerText + number;
 
         if (firstNumberOpen == true) {
 
@@ -44,10 +43,6 @@ for (const numberButton of numberButtons) {
             secondNumber = parseFloat(displayWindow.innerText);
 
         }
-
-
-        console.log('1st input' + firstNumber)
-        console.log('2nd input' + secondNumber)
 
     })
 }
@@ -61,24 +56,16 @@ for (const operatorButton of operatorButtons) {
 
         if (newEquation == true) {
             resultInEquationWindow()
-
         }
 
         equationWindow.innerText = equationWindow.innerText + operatorButton.innerText
 
         if (newNumbers == true) { firstNumber = parseFloat(displayWindow.innerText) }
-
-
-        console.log('1st ' + firstNumber)
-        console.log('2nd ' + secondNumber)
-
+      
         equalsTo()
 
-        console.log('Result ' + firstNumber)
-
-
-        switch (operatorButton.innerText) {
-            case '+':
+        switch (operatorButton.dataset.value) {
+            case 'add':
 
 
                 operationNotDone = '+'
@@ -90,7 +77,7 @@ for (const operatorButton of operatorButtons) {
 
                 break;
 
-            case '-':
+            case 'minus':
 
 
                 operationNotDone = '-'
@@ -102,7 +89,7 @@ for (const operatorButton of operatorButtons) {
                 break;
 
 
-            case 'X':
+            case 'multiply':
                 operationNotDone = 'X'
 
                 firstNumberOpen = false
@@ -111,7 +98,7 @@ for (const operatorButton of operatorButtons) {
 
                 break;
 
-            case '/':
+            case 'divide':
                 operationNotDone = '/'
 
                 firstNumberOpen = false
@@ -120,7 +107,7 @@ for (const operatorButton of operatorButtons) {
 
                 break;
 
-            case '=':
+            case 'equal':
 
                 showResult()
                 reset()
@@ -129,9 +116,9 @@ for (const operatorButton of operatorButtons) {
 
 
             case 'AC':
-                reset()
-                displayTextRefresh()
-                cleanEquationWindow()
+                reset();
+                displayTextRefresh();
+                cleanEquationWindow();
 
                 break;
             default:
@@ -220,7 +207,6 @@ function showResult() {
 }
 
 
-
 function displayTextRefresh() {
 
     displayWindow.innerText = ''
@@ -237,7 +223,6 @@ function resultInEquationWindow() {
 
     equationWindow.innerText = displayWindow.innerText
     newEquation = false
-
 
 }
 

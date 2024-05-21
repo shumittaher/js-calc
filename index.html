@@ -12,46 +12,46 @@
 <body>
 
     <main>
-        <H1>Calculator</H1>
+
+        <h1>Calculator</h1>
 
         <section class="calculator-body">
 
-            <button class="button operator-button">
+            <button data-value="AC" class="button operator-button">
                 <h1>
-                    A/C
+                    C
                 </h1>
             </button>
+
             <button class="button">
                 <h1>
                     B
                 </h1>
             </button>
+
             <button class="button">
                 <h1>
                     P
                 </h1>
             </button>
-            <button class="button operator-button">/</button>
-            <button class="button number-button">7</button>
-            <button class="button number-button">8</button>
-            <button class="button number-button">9</button>
-            <button class="button operator-button">X</button>
-            <button class="button number-button">4</button>
-            <button class="button number-button" value="5">
-                <h1>
-                    5
-                </h1>    
-            </button>
-            <button class="button number-button">6</button>
-            <button class="button operator-button">-</button>
-            <button class="button number-button">1</button>
-            <button class="button number-button">2</button>
-            <button class="button number-button">3</button>
-            <button class="button operator-button">+</button>
-            <button class="button number-button">.</button>
-            <button class="button number-button">0</button>
+
+            <button data-value="divide" class="button operator-button">&divide</button>
+            <button data-value=7 class="button number-button">7</button>
+            <button data-value=8 class="button number-button">8</button>
+            <button data-value=9 class="button number-button">9</button>
+            <button data-value="multiply" class="button operator-button">&times</button>
+            <button data-value=4 class="button number-button">4</button>
+            <button data-value=5 class="button number-button">5</button>
+            <button data-value=6 class="button number-button">6</button>
+            <button data-value="minus" class="button operator-button">-</button>
+            <button data-value=1 class="button number-button">1</button>
+            <button data-value=2 class="button number-button">2</button>
+            <button data-value=3 class="button number-button">3</button>
+            <button data-value="add" class="button operator-button">+</button>
+            <button data-value=. class="button number-button">.</button>
+            <button data-value=0 class="button number-button">0</button>
             <button class="button">()</button>
-            <button class="button operator-button">=</button>
+            <button data-value="equal" class="button operator-button">=</button>
             
             <div class="display-equation">
                 <div id="full-equation">

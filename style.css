@@ -22,18 +22,18 @@ main{
 .button{
 
     background-color: #21dbf3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2em;
-    width: 2em;
+    text-align: center;
+    padding: 10px;
     font-size: xx-large;
+}
+
+.grid_vertical_span{
+    grid-row: span 2;
 }
 
 .display-equation{
 
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column: span 3;
 
     background-color: #21dbf3;
     padding: .25em 1em;
